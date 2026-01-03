@@ -1,0 +1,9 @@
+.item-row {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+}
+
+.item-row button {
+    margin-left: auto;
+}
