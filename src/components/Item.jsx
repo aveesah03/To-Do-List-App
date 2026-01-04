@@ -43,7 +43,7 @@ export default function Item({index, task, onDelete, onEdit}) {
                     ( <input type="text" value={taskItem} ref={inputRef} onChange={e => setTaskItem(e.target.value)} onBlur={handleBlur} onKeyDown={handleKeyDown}/> ) : 
                     ( <p className={taskClassName} onDoubleClick={handleDoubleClick}>{taskItem}</p> )
                 }
-                <button onClick={() => onDelete(task)} name="taskdelete" >Delete</button>
+                <button onClick={() => onDelete(task)} >Delete</button>
             </div>
         </li>
     );
