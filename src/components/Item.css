@@ -7,3 +7,11 @@
 .item-row button {
     margin-left: auto;
 }
+
+.strike-through {
+    text-decoration: line-through;
+}
+
+.noStrike {
+    text-decoration: none;
+}

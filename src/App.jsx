@@ -25,12 +25,18 @@ function App() {
     setItemList(prev => prev.filter(i => i !== item));
   }
 
+  const editItem = (index, item) => {
+    const list = [...itemList];
+    list.splice(index, 1, item);
+    setItemList([...list]);
+  }
+
   return (
     <>
       <h1>TODO LIST</h1>
       <hr />
       <AddItem onAdd={addItem}/>
-      <ItemList taskList={itemList} onDelete={deleteItem}/>
+      <ItemList taskList={itemList} onDelete={deleteItem} onEdit={editItem}/>
     </>
   )
 }

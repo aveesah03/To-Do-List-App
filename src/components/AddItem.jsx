@@ -8,6 +8,10 @@ export default function AddItem(props) {
         setItem("");
     }
 
+    const handleKeyDown = (e) => {
+        if(e.key === 'Enter') handleAddItem();
+    }
+
     return (
         <>
             <input 
@@ -15,6 +19,7 @@ export default function AddItem(props) {
                 value={item}
                 id="additem"
                 name="additem"
+                onKeyDown={(e) => handleKeyDown(e)}
                 onChange={e => setItem(e.target.value)}
             />
             <button onClick={handleAddItem} >Add</button>
